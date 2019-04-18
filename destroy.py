@@ -18,4 +18,5 @@ def destroy():
         return Response("Your data was improperly formatted.  Please send all data in the post body.", status=400)
 
 if __name__ == '__main__':
-    app.run(port=os.environ['PORT'])
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
