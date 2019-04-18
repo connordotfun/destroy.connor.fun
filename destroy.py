@@ -17,5 +17,6 @@ def destroy():
 
     else:
         return Response("Your data was improperly formatted.  Please send all data in the post body.", status=400)
-        
-print('success!')
+
+if __name__ == '__main__':
+    app.run(debug=False, use_reloader=True)
